@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GCE S.R.L. - Grupo de Consultores Energéticos</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Alpine.js for interactivity -->
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <style>
+        /* Use Inter font family */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Smooth scrolling behavior */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom gradient for hero section */
+        .hero-gradient {
+            background: linear-gradient(rgba(0, 21, 41, 0.85), rgba(0, 21, 41, 0.85)), url('https://placehold.co/1920x1080/001529/FFFFFF?text=Infraestructura+Energética') no-repeat center center;
+            background-size: cover;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header x-data="{ open: false }" class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <div class="text-2xl font-bold text-blue-900">
+                    <a href="#">GCE<span class="text-cyan-500"> S.R.L.</span></a>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-cyan-500 transition-colors duration-300">Quiénes Somos</a>
+                    <a href="#services" class="text-gray-600 hover:text-cyan-500 transition-colors duration-300">Servicios</a>
+                    <a href="#team" class="text-gray-600 hover:text-cyan-500 transition-colors duration-300">Nuestro Equipo</a>
+                    <a href="#contact" class="bg-cyan-500 text-white px-4 py-2 rounded-full hover:bg-cyan-600 transition-colors duration-300 shadow">Contacto</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button @click="open = !open" class="md:hidden text-gray-700 focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div x-show="open" @click.away="open = false" class="md:hidden mt-4">
+                <a href="#about" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 rounded">Quiénes Somos</a>
+                <a href="#services" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 rounded">Servicios</a>
+                <a href="#team" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 rounded">Nuestro Equipo</a>
+                <a href="#contact" class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-200 rounded">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-gradient text-white py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-4">Grupo de Consultores Energéticos S.R.L.</h1>
+                <p class="text-lg md:text-2xl font-light text-gray-300 max-w-3xl mx-auto">Proporcionando soluciones integrales y estratégicas para el sector energético de Bolivia y el mundo.</p>
+                <a href="#services" class="mt-8 inline-block bg-cyan-500 text-white font-bold py-3 px-8 rounded-full hover:bg-cyan-600 transition-transform transform hover:scale-105 duration-300 shadow-lg">Descubre Nuestros Servicios</a>
+            </div>
+        </section>
+
+        <!-- About Us Section -->
+        <section id="about" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Nuestra Misión</h2>
+                        <p class="text-gray-600 mb-6 leading-relaxed">
+                            Somos GCE S.R.L., una firma consultora boliviana con sede en La Paz, dedicada a ofrecer soluciones expertas y personalizadas para los desafíos del sector energético. Nuestra misión es impulsar el desarrollo y la eficiencia de proyectos energéticos, tanto públicos como privados, a través de un profundo conocimiento técnico, económico y regulatorio.
+                        </p>
+                        <div class="flex space-x-8">
+                            <div class="text-center">
+                                <p class="text-4xl font-bold text-cyan-500">10+</p>
+                                <p class="text-gray-500">Años de Experiencia Combinada</p>
+                            </div>
+                            <div class="text-center">
+                                <p class="text-4xl font-bold text-cyan-500">100%</p>
+                                <p class="text-gray-500">Compromiso con la Excelencia</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="rounded-lg overflow-hidden shadow-2xl">
+                        <img src="http://googleusercontent.com/file_content/1" alt="[Paneles solares y turbinas eólicas con una planta de energía al fondo]" class="w-full h-full object-cover">
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Services Section -->
+        <section id="services" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Nuestros Servicios Especializados</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Basados en el objeto de nuestra constitución, ofrecemos una gama completa de servicios de consultoría para el sector energético.</p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Service Card 1 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg service-card transition-all duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-cyan-100 text-cyan-600 mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Estudios Técnicos y Económicos</h3>
+                        <p class="text-gray-600 leading-relaxed">Análisis de tarifas, costos de transmisión, evaluación económica de proyectos y verificación de inversiones para los sectores de electricidad, petróleo y tecnología nuclear.</p>
+                    </div>
+
+                    <!-- Service Card 2 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg service-card transition-all duration-300">
+                         <div class="flex items-center justify-center h-16 w-16 rounded-full bg-cyan-100 text-cyan-600 mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Proyectos de Energía</h3>
+                        <p class="text-gray-600 leading-relaxed">Asesoría, desarrollo, seguimiento y puesta en marcha de proyectos de generación, transmisión y distribución de energía eléctrica y del sector petrolero.</p>
+                    </div>
+                    
+                    <!-- Service Card 3 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg service-card transition-all duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-cyan-100 text-cyan-600 mb-6">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" /><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Energía Nuclear y Protección Radiológica</h3>
+                        <p class="text-gray-600 leading-relaxed">Servicios especializados en tecnología nuclear, seguridad, protección radiológica, capacitación, diseño de blindajes y gestión de desechos radiactivos.</p>
+                    </div>
+
+                    <!-- Service Card 4 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg service-card transition-all duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-cyan-100 text-cyan-600 mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Auditorías Técnicas</h3>
+                        <p class="text-gray-600 leading-relaxed">Realización de auditorías técnicas en proyectos industriales, mineros, petroleros, de gas, energéticos, eléctricos, sanitarios y de comunicaciones.</p>
+                    </div>
+
+                    <!-- Service Card 5 -->
+                    <div class="bg-white p-8 rounded-lg shadow-lg service-card transition-all duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-cyan-100 text-cyan-600 mb-6">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Consultoría General y Regulatoria</h3>
+                        <p class="text-gray-600 leading-relaxed">Asesoramiento en temas regulatorios, participación privada, procesos de reformas, administración, contabilidad y comercio exterior de equipamiento energético.</p>
+                    </div>
+                    
+                    <!-- Service Card 6 -->
+                     <div class="bg-white p-8 rounded-lg shadow-lg service-card transition-all duration-300">
+                        <div class="flex items-center justify-center h-16 w-16 rounded-full bg-cyan-100 text-cyan-600 mb-6">
+                           <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Capacitación y Formación</h3>
+                        <p class="text-gray-600 leading-relaxed">Fomento y promoción de la capacitación de personal a través de seminarios y cursos especializados en las diversas áreas de actividad de la empresa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Team Section -->
+        <section id="team" class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Nuestro Equipo Fundador</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">El núcleo de GCE S.R.L. está formado por profesionales dedicados y con una visión clara para el futuro energético.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                    <div class="p-4">
+                        <img src="https://placehold.co/200x200/E0E7FF/1E3A8A?text=SQ" alt="[Foto de Severino Alejandro Quispe Ramos]" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg border-4 border-white">
+                        <h4 class="font-bold text-lg text-blue-900">Severino Alejandro Quispe Ramos</h4>
+                        <p class="text-gray-500">Socio Fundador</p>
+                    </div>
+                     <div class="p-4">
+                        <img src="https://placehold.co/200x200/E0E7FF/1E3A8A?text=KA" alt="[Foto de Katherine Laura Arteaga Aruquipa]" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg border-4 border-white">
+                        <h4 class="font-bold text-lg text-blue-900">Katherine Laura Arteaga Aruquipa</h4>
+                         <p class="text-gray-500">Socia Fundadora</p>
+                    </div>
+                     <div class="p-4">
+                        <img src="https://placehold.co/200x200/E0E7FF/1E3A8A?text=LJ" alt="[Foto de Luis Gonzalo Jordan Lora]" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg border-4 border-white">
+                        <h4 class="font-bold text-lg text-blue-900">Luis Gonzalo Jordan Lora</h4>
+                         <p class="text-gray-500">Socio Fundador</p>
+                    </div>
+                     <div class="p-4">
+                        <img src="https://placehold.co/200x200/E0E7FF/1E3A8A?text=JG" alt="[Foto de Juan Carlos Gomez Herbas]" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg border-4 border-white">
+                        <h4 class="font-bold text-lg text-blue-900">Juan Carlos Gomez Herbas</h4>
+                         <p class="text-gray-500">Socio Fundador</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Contáctenos</h2>
+                    <p class="text-gray-600 mt-4 max-w-2xl mx-auto">¿Listo para potenciar su próximo proyecto energético? Póngase en contacto con nosotros.</p>
+                </div>
+                <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-xl">
+                    <form action="#" method="POST">
+                        <div class="grid md:grid-cols-2 gap-6 mb-6">
+                            <div>
+                                <label for="name" class="block text-gray-700 font-semibold mb-2">Nombre Completo</label>
+                                <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+                            </div>
+                            <div>
+                                <label for="email" class="block text-gray-700 font-semibold mb-2">Correo Electrónico</label>
+                                <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+                            </div>
+                        </div>
+                         <div class="mb-6">
+                            <label for="subject" class="block text-gray-700 font-semibold mb-2">Asunto</label>
+                            <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-gray-700 font-semibold mb-2">Mensaje</label>
+                            <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-cyan-500" required></textarea>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit" class="bg-blue-900 text-white font-bold py-3 px-12 rounded-full hover:bg-blue-800 transition-colors duration-300 shadow-lg">
+                                Enviar Mensaje
+                            </button>
+                        </div>
+                    </form>
+                    <div class="text-center mt-12 text-gray-600">
+                        <p class="font-semibold">Nuestra Oficina</p>
+                        <p>La Paz, Estado Plurinacional de Bolivia</p>
+                        <p>Email: <a href="mailto:contacto@gce.com.bo" class="text-cyan-600 hover:underline">contacto@gce.com.bo</a> (ejemplo)</p>
+                        <p>Teléfono: <a href="tel:+59122000000" class="text-cyan-600 hover:underline">+591 (2) 200-0000</a> (ejemplo)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-blue-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center">
+            <p>&copy; 2025 Grupo de Consultores Energéticos S.R.L. | Todos los derechos reservados.</p>
+            <p class="text-sm text-gray-400 mt-2">Diseño Web por Gemini</p>
+        </div>
+    </footer>
+
+</body>
+</html>
