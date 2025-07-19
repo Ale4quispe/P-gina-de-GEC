@@ -40,14 +40,16 @@
 
     <!-- Header & Navigation -->
     <header x-data="{ open: false }" class="bg-white/80 backdrop-blur-md shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-6 py-4">
+        <div class="container mx-auto px-6 py-3">
             <div class="flex items-center justify-between">
-                <div class="text-2xl font-bold text-blue-900">
-                    <a href="#">GCE<span class="text-cyan-500"> S.R.L.</span></a>
+                <div class="h-12">
+                    <a href="#">
+                        <img src="images/LogoCGE.jpeg" alt="[Logo de GCE S.R.L.]" class="h-full w-auto">
+                    </a>
                 </div>
                 
                 <!-- Desktop Navigation -->
-                <nav class="hidden md:flex space-x-8">
+                <nav class="hidden md:flex space-x-8 items-center">
                     <a href="#about" class="text-gray-600 hover:text-cyan-500 transition-colors duration-300">Quiénes Somos</a>
                     <a href="#services" class="text-gray-600 hover:text-cyan-500 transition-colors duration-300">Servicios</a>
                     <a href="#team" class="text-gray-600 hover:text-cyan-500 transition-colors duration-300">Nuestro Equipo</a>
@@ -88,7 +90,10 @@
             <div class="container mx-auto px-6">
                 <div class="grid md:grid-cols-2 gap-12 items-center">
                     <div>
-                        <h2 class="text-3xl md:text-4xl font-bold text-blue-900 mb-4">Nuestra Misión</h2>
+                        <div class="flex items-center mb-4">
+                            <img src="images/LogoCGE.jpeg" alt="[Logo de GCE S.R.L.]" class="h-12 mr-4">
+                            <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Nuestra Misión</h2>
+                        </div>
                         <p class="text-gray-600 mb-6 leading-relaxed">
                             Somos GCE S.R.L., una firma consultora boliviana con sede en La Paz, dedicada a ofrecer soluciones expertas y personalizadas para los desafíos del sector energético. Nuestra misión es impulsar el desarrollo y la eficiencia de proyectos energéticos, tanto públicos como privados, a través de un profundo conocimiento técnico, económico y regulatorio.
                         </p>
@@ -104,7 +109,7 @@
                         </div>
                     </div>
                     <div class="rounded-lg overflow-hidden shadow-2xl">
-                        <img src="images/panel.jpg" alt="[Paneles solares y turbinas eólicas con una planta de energía al fondo]" class="w-full h-full object-cover">
+                        <img src="images/LogoCGE.jpeg" alt="[Paneles solares y turbinas eólicas con una planta de energía al fondo]" class="w-full h-full object-cover">
                     </div>
                 </div>
             </div>
@@ -114,7 +119,10 @@
         <section id="services" class="py-16 md:py-24 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Nuestros Servicios Especializados</h2>
+                     <div class="flex items-center justify-center mb-4">
+                        <img src="images/LogoCGE.jpeg" alt="[Logo de GCE S.R.L.]" class="h-12 mr-4">
+                        <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Nuestros Servicios Especializados</h2>
+                    </div>
                     <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Basados en el objeto de nuestra constitución, ofrecemos una gama completa de servicios de consultoría para el sector energético.</p>
                 </div>
                 
@@ -180,29 +188,122 @@
         <section id="team" class="py-16 md:py-24 bg-white">
             <div class="container mx-auto px-6">
                  <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Nuestro Equipo Fundador</h2>
+                     <div class="flex items-center justify-center mb-4">
+                        <img src="images/LogoCGE.jpeg" alt="[Logo de GCE S.R.L.]" class="h-12 mr-4">
+                        <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Nuestro Equipo</h2>
+                    </div>
                     <p class="text-gray-600 mt-4 max-w-2xl mx-auto">El núcleo de GCE S.R.L. está formado por profesionales dedicados y con una visión clara para el futuro energético.</p>
                 </div>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-                    <div class="p-4">
-                        <img src="https://placehold.co/200x200/E0E7FF/1E3A8A?text=SQ" alt="[Foto de Severino Alejandro Quispe Ramos]" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg border-4 border-white">
-                        <h4 class="font-bold text-lg text-blue-900">Severino Alejandro Quispe Ramos</h4>
-                        <p class="text-gray-500">Socio Fundador</p>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+                    <!-- Team Member Card 1 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+                        <img src="images\FotoSAQRedond.jpeg" alt="[Foto de Ing. Severino Alejandro Quispe Ramos]" class="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg border-4 border-white">
+                        <div>
+                            <h4 class="font-bold text-xl text-blue-900 mb-2">Ing. Severino Alejandro Quispe Ramos</h4>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                Es Ingeniero Electricista, incluyendo una maestría en Gestión Estratégica de Energía, y una amplia gama de cursos de especialización en áreas como sistemas eléctricos de potencia, energías renovables y regulación económica. Su experiencia laboral abarca roles importantes en el Ministerio de Hidrocarburos y Energía y la Autoridad de Fiscalización y Control Social de Electricidad de Bolivia, donde participó en la formulación de políticas y reglamentos del sector eléctrico, así como en la gestión de unidades y direcciones clave.
+                            </p>
+                        </div>
                     </div>
-                     <div class="p-4">
-                        <img src="https://placehold.co/200x200/E0E7FF/1E3A8A?text=KA" alt="[Foto de Katherine Laura Arteaga Aruquipa]" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg border-4 border-white">
-                        <h4 class="font-bold text-lg text-blue-900">Katherine Laura Arteaga Aruquipa</h4>
-                         <p class="text-gray-500">Socia Fundadora</p>
+                    <!-- Team Member Card 2 -->
+                     <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+                        <img src="images\FotoEusebio_r.jpeg" alt="[Foto de Ing. Eusebio Aruquipa]" class="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg border-4 border-white">
+                        <div>
+                            <h4 class="font-bold text-xl text-blue-900 mb-2">Ing. Eusebio Aruquipa</h4>
+                             <p class="text-gray-600 leading-relaxed text-sm">
+                                Es Ingeniero Eléctrico, con formación adicional en Regulación y Energías Renovables del Sector de Electricidad. Su experiencia profesional se ha desarrollado en el sector de Transmisión, Generación de Energía Eléctrica y en la Autoridad de Fiscalización de Electricidad y Tecnología Nuclear, donde ha ocupado cargos muy importantes en esa institución reguladora, mostrando una base sólida en ingeniería eléctrica con interés en el ámbito de las energías sostenibles.
+                            </p>
+                        </div>
                     </div>
-                     <div class="p-4">
-                        <img src="https://placehold.co/200x200/E0E7FF/1E3A8A?text=LJ" alt="[Foto de Luis Gonzalo Jordan Lora]" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg border-4 border-white">
-                        <h4 class="font-bold text-lg text-blue-900">Luis Gonzalo Jordan Lora</h4>
-                         <p class="text-gray-500">Socio Fundador</p>
+                    <!-- Team Member Card 3 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+                        <img src="images\JorgeTelles_r.jpeg" alt="[Foto de Lic. Jorge Télles Von Borries]" class="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg border-4 border-white">
+                        <div>
+                            <h4 class="font-bold text-xl text-blue-900 mb-2">Lic. Jorge Télles Von Borries</h4>
+                             <p class="text-gray-600 leading-relaxed text-sm">
+                                Tiene una Maestría en Administración de Empresas con concentración en Finanzas del EGADE del Instituto Tecnológico y de Estudios Superiores de Monterrey en Méjico y un Posgrado en Administración en Desarrollo y Operación del Sector de Exploración y Producción Petrolera - Upstream en Noruega, además de estudios en Economía de la Universidad de Texas A&M en EE.UU. Con más de 15 años de experiencia en la Autoridad de Fiscalización de Electricidad y Tecnología Nuclear, ha liderado la fiscalización y evaluación de inversiones de capital en el sector eléctrico, así como el análisis financiero y económico de proyectos eléctricos de generación, transmisión, distribución y de energías renovables. Su experiencia también incluye la elaboración de modelos econométricos para la proyección de la demanda de energía y la determinación de tarifas para generación y distribución.
+                            </p>
+                        </div>
                     </div>
-                     <div class="p-4">
-                        <img src="https://placehold.co/200x200/E0E7FF/1E3A8A?text=JG" alt="[Foto de Juan Carlos Gomez Herbas]" class="w-32 h-32 rounded-full mx-auto mb-4 shadow-lg border-4 border-white">
-                        <h4 class="font-bold text-lg text-blue-900">Juan Carlos Gomez Herbas</h4>
-                         <p class="text-gray-500">Socio Fundador</p>
+                    <!-- Team Member Card 4 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+                        <img src="images\Foto OscarEulate.jpg" alt="[Foto de Ing. Oscar Eulate Choque]" class="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg border-4 border-white">
+                        <div>
+                            <h4 class="font-bold text-xl text-blue-900 mb-2">Ing. Oscar Eulate Choque</h4>
+                             <p class="text-gray-600 leading-relaxed text-sm">
+                                Es Ingeniero Electricista con amplia experiencia en el sector de energía; cuenta con el titulo en Ingeniería Eléctrica en la Universidad Mayor de San Andrés, Maestría en Ingeniería de Software, postgrado en Administración de Empresas, postgrado en energía – ingeniería eléctrica, diplomados en energías alternativas y eficiencia energética, diplomado en generación eléctrica y sistemas eléctricos y diplomado en transmisión, despacho y distribución de energía eléctrica.
+                            </p>
+                        </div>
+                    </div>
+                     <!-- Team Member Card 5 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+                        <img src="images\PalomaAguilar_r.jpeg" alt="[Foto de Licenciada Paloma Aguilar Agramont]" class="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg border-4 border-white">
+                        <div>
+                            <h4 class="font-bold text-xl text-blue-900 mb-2">Lic. Paloma Aguilar Agramont</h4>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                Es Economista boliviana con una sólida trayectoria profesional y formación académica. Posee una Licenciatura en Economía de la Universidad Católica y dos Maestrías de la Universidad de Barcelona y la Universidad de Chile. Su experiencia laboral incluye la elaboración del Plan Energético Nacional 2023-2050 de Bolivia, consultorías en el sector energético, análisis de mercados y estadísticas para diversas entidades gubernamentales y privadas, y la gestión de proyectos de desarrollo. Aguilar también ha trabajado en la regulación económica del sector eléctrico y en el análisis de políticas públicas. Su conjunto de habilidades abarca desde la planificación energética hasta el análisis económico y la gestión de proyectos, demostrando su capacidad para abordar desafíos complejos en el ámbito económico y energético.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Team Member Card 6 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+                        <img src="images\GustavZarate_r.jpeg" alt="[Foto de Lic. Gustavo Zarate Taborga]" class="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg border-4 border-white">
+                        <div>
+                            <h4 class="font-bold text-xl text-blue-900 mb-2">Lic. Gustavo Zarate Taborga</h4>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                Es Economista con una sólida trayectoria en el sector energético, destacándose por su experiencia en el desarrollo de negocios de energías renovables y la formulación de políticas energéticas. Se desempeña como Desarrollador de Negocios Senior en TotalÉnergies, donde ha diseñado modelos de negocio para proyectos de energías renovables y elaborado propuestas de reforma normativa. Anteriormente, trabajó en la Agencia Francesa de Desarrollo, coordinando la transición energética en Bolivia, y ocupó cargos directivos en el Ministerio de Hidrocarburos y Energía y la Universidad Privada Boliviana. Posee una Maestría en Economía y Derecho de la Energía de la Universidad Montpellier 1 y una Maestría en Políticas Económicas y Sociales de la Universidad Pierre Mendes France.
+                            </p>
+                        </div>
+                    </div>
+                     <!-- Team Member Card 7 -->
+                     <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+                        <img src="images\Fernando Soria_r.jpeg" alt="[Foto de Lic. Fernando Félix Soria Limachi]" class="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg border-4 border-white">
+                        <div>
+                            <h4 class="font-bold text-xl text-blue-900 mb-2">Lic. Fernando Félix Soria Limachi</h4>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                Es Auditor Financiero, Licenciatura en Auditoría de la Universidad Loyola y tiene una Maestría en Auditoría Gubernamental y Control Gubernamental de la Universidad Mayor de San Andrés, además de varios diplomados y cursos de especialización. Su experiencia profesional abarca tanto consultorías generales como auditorías financieras y operativas, así como inventarios y revalúo técnico de activos fijos para diversas entidades gubernamentales y empresas privadas entre 2012 y 2025.
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Team Member Card 8 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+                        <img src="images\RaulTancara_r.jpeg" alt="[Foto de Lic. Carlos Raúl Tancara Huarachi]" class="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg border-4 border-white">
+                        <div>
+                            <h4 class="font-bold text-xl text-blue-900 mb-2">Lic. Carlos Raúl Tancara Huarachi</h4>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                Es Auditor Financiero, con una sólida formación académica, incluyendo una Maestría en Dirección y Administración de Empresas de la Escuela Europea de Negocios y una Licenciatura en Auditoría Financiera de la Universidad Mayor de San Andrés (UMSA). Su experiencia laboral abarca diversos roles en el sector público, destacando su desempeño en el Ministerio de Hidrocarburos y Energías, donde fue responsable del seguimiento de proyectos sectoriales y gestión de financiamiento con organismos internacionales. Además, ha ocupado cargos financieros y administrativos en instituciones como el INE, YPFB-Petroandina SAM, y SERGEOTECMIN. Posee habilidades en gestión de proyectos, finanzas, auditoría y manejo de paquetes informáticos, con un nivel avanzado en Excel. Su formación se complementa con diplomados en Gestión Estratégica del Talento Humano, Eficiencia Energética y Energías Renovables, y cursos especializados en energías renovables y gestión pública.
+                            </p>
+                        </div>
+                    </div>
+                     <!-- Team Member Card 9 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+                        <img src="images\IsmmaelVillca.jpeg" alt="[Foto de Lic. Ismael Villca Quispe]" class="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg border-4 border-white">
+                        <div>
+                            <h4 class="font-bold text-xl text-blue-900 mb-2">Lic. Ismael Villca Quispe</h4>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                Es Licenciado en Física, con estudios de: Diplomado en: Educación Superior; Especialista en Protección Radiológica; Entrenamiento en Física Médica; Termoluminiscencia Aplicada a la Dosimetría; Seguridad y Reglamentación de Fuentes de Radiación; Planificación del Tratamiento por Radioterapia; Radiografía Industrial Niveles I y II; Implementación de un Programa de Garantía de Calidad en Radioterapia en sus Aspectos Físicos; Capacitación Sobre Prevención de Exposiciones Accidentales en Radioterapia; Capacitación Sobre Mantenimiento de Tomógrafos Computarizados; Capacitación sobre Radioterapia Moderna con aceleradores lineales.
+                            </p>
+                        </div>
+                    </div>
+                     <!-- Team Member Card 10 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+                        <img src="images\FloraGutierrez.jpeg" alt="[Foto de Lic. Flora Gutierrez Anze]" class="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg border-4 border-white">
+                        <div>
+                            <h4 class="font-bold text-xl text-blue-900 mb-2">Lic. Flora Gutierrez Anze</h4>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                Es Licenciada en Física con estudios en Especialista en Protección Radiológica; Especialista en Gestión de Emergencias Radiológicas; capacitación del Sistema de Contabilidad de material nuclear – Salvaguardia; capacitación sobre Concientización sobre Arquitectura de Detección de Seguridad Nuclear; capacitación Licenciamiento de Ciclotrón; Licenciamiento en radioterapia; Evaluación de Cálculo de Blindaje de instalaciones radiológicas; Biodosimetría en la Preparación y Respuesta a Emergencias Radiológicas. Con amplia experiencia en: Regulación del sector nuclear, asumió el cargo de Directora de la Dirección de Tecnología Nuclear (DTN) en la AETN en la gestión 2022 a marzo 2025.
+                            </p>
+                        </div>
+                    </div>
+                     <!-- Team Member Card 11 -->
+                    <div class="bg-gray-50 p-6 rounded-lg shadow-lg text-center">
+                        <img src="images\Foto Roxana Añez.jpeg" alt="[Foto de Dra. Rozana Añez Valdez]" class="w-32 h-32 rounded-full object-cover mx-auto mb-4 shadow-lg border-4 border-white">
+                        <div>
+                            <h4 class="font-bold text-xl text-blue-900 mb-2">Dra. Rozana Añez Valdez</h4>
+                            <p class="text-gray-600 leading-relaxed text-sm">
+                                Es abogada con destacada formación académica que incluye una Licenciatura en Derecho con Mención Honrosa, un Magíster en Derecho Empresarial Corporativo, y diversos diplomados en Gerencia Pública y Derecho Administrativo. Además, cuenta con una amplia experiencia laboral en el sector público, desempeñándose como asesora legal en el Gobierno Municipal de El Alto y como consultora en varios ministerios. Su experiencia específica se centra en el Ministerio de Hidrocarburos y Energía, donde trabajó como Especialista en Derecho Regulatorio y luego como Jefa de la Unidad de Control y Fiscalización.
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -212,7 +313,10 @@
         <section id="contact" class="py-16 md:py-24 bg-gray-50">
             <div class="container mx-auto px-6">
                 <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Contáctenos</h2>
+                    <div class="flex items-center justify-center mb-4">
+                        <img src="images/LogoCGE.jpeg" alt="[Logo de GCE S.R.L.]" class="h-12 mr-4">
+                        <h2 class="text-3xl md:text-4xl font-bold text-blue-900">Contáctenos</h2>
+                    </div>
                     <p class="text-gray-600 mt-4 max-w-2xl mx-auto">¿Listo para potenciar su próximo proyecto energético? Póngase en contacto con nosotros.</p>
                 </div>
                 <div class="max-w-4xl mx-auto bg-white p-8 md:p-12 rounded-lg shadow-xl">
@@ -241,11 +345,12 @@
                             </button>
                         </div>
                     </form>
-                    <div class="text-center mt-12 text-gray-600">
-                        <p class="font-semibold">Nuestra Oficina</p>
-                        <p>La Paz, Estado Plurinacional de Bolivia</p>
-                        <p>Email: <a href="mailto:contacto@gce.com.bo" class="text-cyan-600 hover:underline">contacto@gce.com.bo</a> (ejemplo)</p>
-                        <p>Teléfono: <a href="tel:+59122000000" class="text-cyan-600 hover:underline">+591 (2) 200-0000</a> (ejemplo)</p>
+                    <div class="text-center mt-12 text-gray-600 space-y-2">
+                        <p class="font-semibold text-lg">Nuestra Oficina</p>
+                        <p>Las Delicias, Calle: Tipuani, Nro. 226, La Paz, Bolivia</p>
+                        <p>Email: <a href="mailto:GCEsrl@outlook.com" class="text-cyan-600 hover:underline">GCEsrl@outlook.com</a></p>
+                        <p>Teléfono: <a href="tel:+5912210258" class="text-cyan-600 hover:underline">(591 - 2) 210258</a></p>
+                        <p>Celular: <a href="tel:+59173037200" class="text-cyan-600 hover:underline">(591) 73037200</a></p>
                     </div>
                 </div>
             </div>
@@ -255,6 +360,7 @@
     <!-- Footer -->
     <footer class="bg-blue-900 text-white py-8">
         <div class="container mx-auto px-6 text-center">
+            <img src="images/LogoCGE.jpeg" alt="[Logo de GCE S.R.L.]" class="h-12 mx-auto mb-4">
             <p>&copy; 2025 Grupo de Consultores Energéticos S.R.L. | Todos los derechos reservados.</p>
             <p class="text-sm text-gray-400 mt-2">Diseño Web por Gemini</p>
         </div>
